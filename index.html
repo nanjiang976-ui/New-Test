@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心情计算器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 欢迎页面 -->
+        <div id="welcome-screen" class="screen active">
+            <h1>心情计算器</h1>
+            <p>通过20道简单的问题，测测你今天的心情指数。</p>
+            <button id="start-btn" class="btn">开始测试</button>
+        </div>
+
+        <!-- 答题页面 -->
+        <div id="quiz-screen" class="screen hidden">
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+            <div class="question-container">
+                <h2 id="question-text">问题加载中...</h2>
+                <div id="options-container" class="options">
+                    <!-- 选项将通过JS生成 -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 结果页面 -->
+        <div id="result-screen" class="screen hidden">
+            <h2>测试结果</h2>
+            <div class="score-circle">
+                <span id="score">0</span>
+                <span class="label">分</span>
+            </div>
+            <div class="analysis-card">
+                <h3>心情分析报告</h3>
+                <p id="analysis-text">分析生成中...</p>
+            </div>
+            <button id="restart-btn" class="btn">再测一次</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
